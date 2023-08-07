@@ -161,7 +161,6 @@ public class Exercises {
         int liczbaUzytkownika = 0;
         int drugaLiczbaUzytkownika = 0;
         int dzialanie = 0;
-        int error = 0;
         String symbolDzialania = "+";
 
         System.out.println("Cześć, jestem kalukatorem który ma 4 możliwości. Dodawanie (+), odejmowanie (-), mnożenie (*) oraz dzielenie (/).\n" +
@@ -170,17 +169,18 @@ public class Exercises {
             System.out.println("Podaj pierwszą liczbę rzeczywistą która nie jest zerem");
             try {
                 liczbaUzytkownika = scan.nextInt();
+                if (liczbaUzytkownika == 0) {
+                    System.out.println("Błąd! Podaj liczbę która nie jest zerem");
+                    continue;
+                } else {
+                    System.out.println("Poprawna liczba, przechodzę do kolejnego kroku");
+                    break;
+                }
             } catch (InputMismatchException err) {
                 System.out.println("Nieprawidłowy znak, podaj liczbę");
-                error = 1;
+                scan.nextLine();
             }
-
-            if (liczbaUzytkownika != 0) {
-                System.out.println("Poprawna liczba, przechodze do kolejnego kroku");
-            } else {
-                System.out.println("Bład! Podaj liczbę która nie jest zerem");
-            }
-        } while (liczbaUzytkownika == 0 && error == 1);
+        } while (true);
         scan.nextLine();
         do {
             System.out.println("Podaj symbol działania. Dodawanie (+), odejmowanie (-), mnożenie (*) oraz dzielenie (/)");
@@ -199,19 +199,22 @@ public class Exercises {
         } while (!symbolDzialania.equals("+") && !symbolDzialania.equals("-") && !symbolDzialania.equals("*") && !symbolDzialania.equals("/"));
 
         do {
-            System.out.println("Podaj drugą liczbę rzeczywistą która nie jest zerem");
+            System.out.println("Podaj pierwszą liczbę rzeczywistą która nie jest zerem");
             try {
                 drugaLiczbaUzytkownika = scan.nextInt();
+                if (drugaLiczbaUzytkownika == 0) {
+                    System.out.println("Błąd! Podaj liczbę która nie jest zerem");
+                    continue;
+                } else {
+                    System.out.println("Poprawna liczba, przechodzę do kolejnego kroku");
+                    break;
+                }
             } catch (InputMismatchException err) {
                 System.out.println("Nieprawidłowy znak, podaj liczbę");
+                scan.nextLine();
             }
-
-            if (drugaLiczbaUzytkownika != 0) {
-                System.out.println("Poprawna liczba, przechodzę do kalkulacji");
-            } else {
-                System.out.println("Bład! Podaj liczbę która nie jest zerem");
-            }
-        } while (drugaLiczbaUzytkownika == 0);
+        } while (true);
+        scan.nextLine();
 
         if (symbolDzialania.equals("+")) {
             dzialanie = liczbaUzytkownika + drugaLiczbaUzytkownika;
