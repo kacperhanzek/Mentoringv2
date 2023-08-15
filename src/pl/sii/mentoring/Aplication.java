@@ -10,6 +10,6 @@ public class Aplication {
     public static void main(String[] args) {
 
         Exercises exercises = new Exercises();
-        exercises.jk6();
+        exercises.ex48();
     }
 }
