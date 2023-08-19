@@ -7,9 +7,15 @@ import java.util.Scanner;
 
 public class Aplication {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
-        Exercises exercises = new Exercises();
-        exercises.ex48();
+//        Exercises exercises = new Exercises();
+//        exercises.listy();
+        pole_prostokata pole = new pole_prostokata();
+        pole.czytaj_dane();
+        pole.przetworz_dane();
+        pole.wyswietl_wynik();
+
     }
 }

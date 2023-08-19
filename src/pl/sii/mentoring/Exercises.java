@@ -1,9 +1,6 @@
 package pl.sii.mentoring;
 
-import java.util.InputMismatchException;
-import java.util.Locale;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Exercises {
     public void ex11() {
@@ -817,8 +814,13 @@ public class Exercises {
             }
             System.out.println();
         }
-
     }
 
+    public void listy(){
+        List<String> list = new ArrayList<>();
+        list.add("Mentor");
+        list.add("Uczeń");
+        System.out.println(list);
+    }
 }
 
