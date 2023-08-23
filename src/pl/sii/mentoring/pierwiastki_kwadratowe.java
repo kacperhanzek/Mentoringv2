@@ -3,6 +3,7 @@ package pl.sii.mentoring;
 import java.util.Scanner;
 
 public class pierwiastki_kwadratowe {
+
     double a, b, c, x, x2, delta;
     char liczbaPierwiastkow;
 

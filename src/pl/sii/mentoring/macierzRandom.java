@@ -33,9 +33,9 @@ public class macierzRandom {
         for (i = 0; i < rozmiar; i++) {
             for (j = 0; j < rozmiar; j++) {
                 if (j == i) {
-                    System.out.print(redColorCode + macierz[i][j] + " " + resetColorCode);
+                    System.out.print(redColorCode + (int) macierz[i][j] + " " + resetColorCode);
                 } else {
-                    System.out.print(macierz[i][j] + " ");
+                    System.out.print((int) macierz[i][j] + " ");
                 }
             }
             System.out.println();

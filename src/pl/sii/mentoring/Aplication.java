@@ -18,10 +18,23 @@ public class Aplication {
 //        pierwiastki_kwadratowe pierwiastek = new pierwiastki_kwadratowe();
 //        pierwiastek.czytajDane();
 //        pierwiastek.przetworzDane();
-////        pierwiastek.wyswietlWynik();
-        macierzRandom mr = new macierzRandom();
-        mr.czytaj_dane();
-        mr.przetworz_dane();
-        mr.wyswietl_wynik();
+//        pierwiastek.wyswietlWynik();
+//        macierzRandom mr = new macierzRandom();
+//        mr.czytaj_dane();
+//        mr.przetworz_dane();
+//        mr.wyswietl_wynik();
+
+//        int n = 6;
+//        int [] liczby = new int[n];
+//
+//        sortowanieNLiczb babelki = new sortowanieNLiczb();
+//
+//        babelki.czytaj_dane(liczby, n);
+//        babelki.przetworz_dane(liczby, n);
+//        babelki.wyswietl_wynik(liczby, n);
+
+        int nSilnia = 10;
+        System.out.println("Silnia z " + nSilnia + " to: " +silnia.silniaD(nSilnia));
+
     }
 }
